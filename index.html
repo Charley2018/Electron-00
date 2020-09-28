@@ -6,25 +6,48 @@
   <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
   <title>Rush Time</title>
 
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./source/css/style.css">
+
+  <script>
+    window.onload = function () {
+    setTimeout(function () {
+      document.getElementById('loading-mask').style.display = 'none';
+    }, 900);
+  }
+  </script>
 </head>
 
 <body>
+  <!-- loading界面 -->
+  <div id="loading-mask">
+    <div class="loading-img">
+      <!-- <img alt="Meghna Preloader" src="images/preloader.gif" /> -->
+      <!-- <img src="images/loading-bg.png" class="scale1-2"> -->
+    </div>
+    <div class="loading-img">
+      <!-- <img src="images/little-c.png" class="clockwise"> -->
+    </div>
+    <div class="loading-img">
+      <!-- <img src="images/big-c.png" class="anti-clockwise"> -->
+    </div>
+  </div>
 
   <div id="container">
     <div id="box">
-      <div id="show" class="clock">
-        距离下班还剩：<span></span>:<span></span>:<span></span>
-      </div>
+      <div class="box1">
+        <div id="show" class="clock">
+          <div id="showTextBox"></div><span>00</span>:<span>00</span>:<span>00</span>
+        </div>
 
-      <div class="button">
-        <button onclick="btn1()">修改配置</button> <button onclick="btn2()">开/关灯</button>
+        <div class="button">
+          <button onclick="btn1()">修改配置</button> <button onclick="btn2()">开/关灯</button>
+        </div>
       </div>
     </div>
   </div>
   <!-- You can also require other files to run in this process -->
   <script src="./renderer.js"></script>
-  <script src="./js/clock.js"></script>
+  <script src="./source/js/clock.js"></script>
 
 
 </body>

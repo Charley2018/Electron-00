@@ -6,25 +6,36 @@
   <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
   <title>Rush Time</title>
 
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./source/css/style.css">
 </head>
 
 <body>
   <div id="container">
     <div id="box">
-      <div id="show" class="config-input">
-        请设置您的下班时间： <input type="text" id="value0" placeholder="17" style="width: 20px;" /> 时 <input type="text"
-          id="value1" placeholder="30" style="width: 20px;" /> 分
-      </div>
+      <div class="box0">
+        <div class="config-input">
+          请输入您的设置时间 ： <input type="text" id="value0" placeholder="" value="" style="width: 20px;" /> 时 <input
+            type="text" id="value1" placeholder="" style="width: 20px;" /> 分
+        </div>
 
-      <div class="button">
-        <button onclick="setStorage()">确认修改</button> <button onclick="cancel()">取消修改</button>
+        <div class="config-input">
+          请输入您的显示文字： <input type="text" id="value2" placeholder="请输入内容" style="width: 100px;" />
+        </div>
+
+
+        <div class="config-input">
+          设置倒计时结束提示： <input type="text" id="value3" placeholder="请输入内容" style="width: 100px;" />
+        </div>
+
+        <div class="button">
+          <button onclick="setStorage()">确认修改</button> <button onclick="cancel()">取消修改</button>
+        </div>
       </div>
     </div>
   </div>
   <!-- You can also require other files to run in this process -->
   <script src="./renderer.js"></script>
-  <script src="./js/config.js"></script>
+  <script src="./source/js/config.js"></script>
 
 </body>
 
