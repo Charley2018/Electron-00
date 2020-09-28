@@ -41,6 +41,7 @@
 .config-input {
     padding-top: 5px;
     text-align: center;
+    font-weight: bolder;
 }
 
 /* loading */
