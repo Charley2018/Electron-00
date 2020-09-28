@@ -1,6 +1,10 @@
-# electron-quick-start
+# Charles Chan's Tools
 
-**Clone and run for a quick way to see Electron in action.**
+## Download
+
+If you want to download this solfware,please click this [Link](http://note.youdao.com/noteshare?id=d43bf3fa48c3742730e3dd4ddcf5d566&sub=744B91563C6F4F1995865DC2CE3C31B1)
+
+**Design By Charles Chan.**
 
 This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
 
@@ -20,9 +24,9 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/electron/electron-quick-start
+git clone https://github.com/Charley2018/Electron-00
 # Go into the repository
-cd electron-quick-start
+cd Electron-00
 # Install dependencies
 npm install
 # Run the app
