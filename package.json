@@ -1,0 +1,24 @@
+{
+  "name": "charles-chan-s-tools",
+  "version": "1.0.0",
+  "description": "A Tool Design By Charles Chan",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-packager . rush-time --win --out ../Charles-Chan-s-Tools --arch=x64 --app-version=1.0.0 --electron-version=10.1.2 --icon=logo.ico"
+  },
+  "repository": "https://github.com/Charley2018/Electron-00",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "Charles Chan",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^10.1.2"
+  }
+
+}
