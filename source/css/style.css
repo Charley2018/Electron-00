@@ -1,3 +1,74 @@
+body {
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+    margin: 0px;
+  }
+
+  header{
+    cursor: move;
+  }
+
+  #primary-ul li {
+
+    list-style: none;
+    float: left;
+    text-align: center;
+
+  }
+
+  #primary-ul li a {
+    -webkit-app-region: no-drag;
+    -webkit-user-select: auto;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: all 1s;
+    font-size: 18px;
+  }
+
+  #primary-ul li a:hover {
+    color: orange;
+  }
+
+  #primary-ul {
+    padding-left: 8%;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    
+  }
+
+  .auto-hide-header {
+    height: 80px;
+    background-color: #23ac73;
+    /* background: linear-gradient(to bottom,#23ac73 85%, #ffffff); */
+  }
+
+
+  .level-pro {
+    position: relative;
+    z-index: 99999999;
+  }
+
+  #logo {
+    padding-top: 15px;
+  }
+
+  .linkFun {
+    /* display: none; */
+    width: 90px;
+    padding-top: 28px;
+    padding-left: 1%;
+  }
+
+
+  .menu-cc img{
+    width: 30px;
+    height: 30px;
+    float: right;
+    -webkit-app-region: no-drag;
+    cursor:pointer;
+  }
+
 /* 添加了开关灯渐变效果 */
 
 .clock {
@@ -6,6 +77,19 @@
     vertical-align: middle;
     font-size: larger;
     font-weight: bold;
+    font-size: 64px;
+}
+
+@media screen and (max-width: 860px) {
+    .clock {
+        font-size: larger;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #primary-ul li {
+        display: none;
+    }
 }
 
 .button {
@@ -23,11 +107,11 @@
 }
 
 .box0 {
-    margin-top: -2em;
+    margin-top: 1em;
 }
 
 .box1 {
-    margin-top: -0.5em;
+    margin-top: 2em;
 }
 
 #container {
@@ -38,10 +122,27 @@
     left: 0;
 }
 
+@font-face {
+    font-family: zcool-happy;
+    src: url('../font/站酷快乐体2016修订版.ttf');
+}
+
 .config-input {
     padding-top: 5px;
     text-align: center;
-    font-weight: bolder;
+    font-family: zcool-happy;
+}
+
+.button button {
+    margin-left: 40px;
+    margin-right: 30px;
+    background-color: #68c29d;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.button button:hover {
+    background-color: #188054;
 }
 
 /* loading */

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
   <title>Rush Time</title>
 
@@ -10,14 +11,47 @@
 
   <script>
     window.onload = function () {
-    setTimeout(function () {
-      document.getElementById('loading-mask').style.display = 'none';
-    }, 900);
-  }
+      setTimeout(function () {
+        document.getElementById('loading-mask').style.display = 'none';
+      }, 900);
+    }
   </script>
+
+
+
+
+
 </head>
 
 <body>
+  <header class="auto-hide-header">
+    <div class="level-pro">
+      <nav class="primary-nav">
+        <ul id="primary-ul">
+          <li>
+            <div id="logo"> <a><img src="./source/images/logo.png" style="width: 50px;" alt="Logo"></a></div>
+          </li>
+          <li>
+            <div class="linkFun"><a href="javascript:void(0);" onclick="btn2()">开关灯</a></div>
+          </li>
+          <li>
+            <div class="linkFun"><a href="javascript:void(0);" onclick="btn1()">修改配置</a></div>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="menu-cc">
+        <img src="./source/images/close.png" id="close">
+        <img src="./source/images/fullscreen-line.png" id="max">
+        <img src="./source/images/sami-select.png" id="min">
+      </div>
+    </div>
+  </header>
+
+
+
+
   <!-- loading界面 -->
   <div id="loading-mask">
     <div class="loading-img">
@@ -38,17 +72,13 @@
         <div id="show" class="clock">
           <div id="showTextBox"></div><span>00</span>:<span>00</span>:<span>00</span>
         </div>
-
-        <div class="button">
-          <button onclick="btn1()">修改配置</button> <button onclick="btn2()">开/关灯</button>
-        </div>
       </div>
     </div>
   </div>
   <!-- You can also require other files to run in this process -->
   <script src="./renderer.js"></script>
   <script src="./source/js/clock.js"></script>
-
+  <script src="./source/js/jquery-3.2.1.min.js"></script>
 
 </body>
 

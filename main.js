@@ -9,8 +9,10 @@ function createWindow () {
     width: 400,
     height: 280,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
-    }
+      // preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: true
+    },
+    frame: false //无边框
   })
 
   // and load the index.html of the app.
@@ -18,6 +20,35 @@ function createWindow () {
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
+
+  app.on('window-all-closed', function () {
+    if (process.platform !== 'darwin') app.quit()
+  })
+  
+  let ipcMain = require('electron').ipcMain;
+  //接收最小化命令
+  ipcMain.on('window-min', function() {
+      mainWindow.minimize();
+  })
+  //接收最大化命令
+  ipcMain.on('window-max', function() {
+      if (mainWindow.isMaximized()) {
+          mainWindow.restore();
+      } else {
+          mainWindow.maximize();
+      }
+  })
+  //接收关闭命令
+  ipcMain.on('window-close', function() {
+      mainWindow.close();
+  })
+
+  mainWindow.on('maximize', function () {
+    mainWindow.webContents.send('main-window-max');
+   })
+   mainWindow.on('unmaximize', function () {
+     mainWindow.webContents.send('main-window-unmax');
+   })
 }
 
 // This method will be called when Electron has finished
@@ -36,9 +67,7 @@ app.whenReady().then(() => {
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
-app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') app.quit()
-})
+
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
