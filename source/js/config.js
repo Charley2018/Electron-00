@@ -39,3 +39,21 @@ function cancel() {
 }
 
 
+var lightFlag = localStorage.getItem('lightFlag');
+if (lightFlag == '' || lightFlag == undefined || lightFlag == null) {
+  document.body.style.backgroundColor = '#FFFFFF';
+  document.body.style.opacity = '100%';
+}else{
+  document.body.style.backgroundColor = '#333439';
+  document.body.style.opacity = '50%';
+}
+
+function btn2() {
+    if (lightFlag == '' || lightFlag == undefined || lightFlag == null) {
+      localStorage.setItem('lightFlag','true');
+      location.reload();
+    }else{
+      localStorage.setItem('lightFlag','');
+      location.reload();
+    }
+  }
